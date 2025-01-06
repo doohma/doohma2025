@@ -104,45 +104,50 @@
             display: flex;
             justify-content: space-between;
             gap: 2rem;
-            margin-top: 1.5rem; /* Reduced space */
+            margin-top: 1.5rem;
             flex-wrap: wrap;
+            justify-content: center;
         }
-        .product {
-            background: #fff;
+        .products a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
             width: 30%;
             padding: 2rem;
             text-align: center;
+            background: #fff;
             border: 1px solid #eb6464;
             border-radius: 12px;
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .product img {
+        .products a:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .products img {
             max-width: 70%;
             height: auto;
             margin-bottom: 1.5rem;
             background-color: #ccc;
         }
-        .product a {
-            color: #28c4bd;
-            font-weight: 600;
-            font-size: 1.1rem;
-            text-decoration: none;
-        }
-        .product a:hover {
-            color: #eb6464;
-            text-decoration: underline;
-        }
-        .product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
         .status {
-            display: block;
+            display: inline-block;
             font-size: 0.9rem;
-            color: #555;
-            margin-top: 0.5rem;
-            font-style: italic;
+            color: #fff;
+            padding: 0.5rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 0.5rem;
+        }
+        .status-live {
+            background-color: #4CAF50; /* Green */
+        }
+        .status-development {
+            background-color: #FFBF00; /* Amber */
+        }
+        .status-discontinued {
+            background-color: #FF5733; /* Red */
         }
 
         /* Contact Section */
@@ -193,11 +198,11 @@
                 flex-direction: column;
                 align-items: center;
             }
-            .product {
+            .products a {
                 width: 80%;
                 margin-bottom: 2rem;
             }
-            .product img {
+            .products img {
                 max-width: 50%;
             }
             section h2 {
@@ -222,7 +227,7 @@
                 flex-direction: column;
                 gap: 1rem;
             }
-            .product {
+            .products a {
                 width: 100%;
             }
         }
@@ -259,27 +264,24 @@
     <section id="products">
         <h2>Our Products</h2>
         <div class="products">
-            <div class="product">
+            <a href="https://www.gopost.uk" target="_blank">
                 <h3>GoPost</h3>
                 <img src="gopost.png" alt="GoPost Logo">
                 <p>GoPost helps users effortlessly migrate YouTube content to Instagram and other social platforms with AI-driven optimization and seamless integration.</p>
-                <a href="https://www.gopost.uk" target="_blank">Visit GoPost</a>
-                <span class="status">Status: Under Development</span>
-            </div>
-            <div class="product">
+                <div class="status status-development">In Development</div>
+            </a>
+            <a href="https://www.datamug.io" target="_blank">
                 <h3>Datamug</h3>
                 <img src="datamug.png" alt="Datamug Logo">
-                <p>Datamug provides cutting-edge tools and certifications for data quality and data management, empowering professionals to excel in the digital world.</p>
-                <a href="https://www.datamug.io" target="_blank">Visit Datamug</a>
-                <span class="status">Status: Live</span>
-            </div>
-            <div class="product">
+                <p>Datamug offers expert-led training in data quality and management, helping professionals enhance their skills in the digital era.</p>
+                <div class="status status-live">Live</div>
+            </a>
+            <a href="https://doohma.com" target="_blank">
                 <h3>Doohma Ads</h3>
                 <img src="doohmaads.png" alt="Doohma Ads Logo">
-                <p>Doohma Ads was designed to optimize digital advertising campaigns, but has been discontinued.</p>
-                <a href="https://doohma.com" target="_blank">Visit Doohma Ads</a>
-                <span class="status">Status: Discontinued</span>
-            </div>
+                <p>Doohma Ads is an innovative product that uses an in-store digital display network to help advertisers broadcast ads through the cloud.</p>
+                <div class="status status-discontinued">Discontinued</div>
+            </a>
         </div>
     </section>
 
@@ -289,8 +291,8 @@
         <div class="contact-info">
             <p>Email: <a href="mailto:admin@doohma.com">admin@doohma.com</a></p>
             <p>Phone: +44 7392 106595</p>
-	    <p>Company Name: Doohma Limited</p>
-	    <p>Registration Number: 12272903</p>
+            <p>Company Name: Doohma Limited</p>
+            <p>Registration Number: 12272903</p>
             <p>Address: 20-22 Wenlock Road, London, England</p>
         </div>
     </section>
